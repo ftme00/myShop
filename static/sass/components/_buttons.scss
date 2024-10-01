@@ -1,0 +1,14 @@
+.btn-primary, .btn-add-to-cart, .btn-view-stores,
+.btn-add-comment, .btn-default,
+.btn-add-address, .btn-checkout-accept,
+.btn-share {
+  display: inline-block;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  line-height: 22px;
+}

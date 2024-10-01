@@ -1,0 +1,29 @@
+{% extends "modules/custom_tags/not_found.html" %}
+{% block page_title %}
+404 | {% if store.title_tag %}{{ store.title_tag }}{% else %}{{store.name}}{% endif %}
+{% endblock %}
+{% block meta %}
+
+{% endblock %}
+
+{% block custom_header %}
+{% endblock %}
+
+{% block content %}
+{% header_mod '{}' %}
+<div class="container">
+    <div class="error-page">
+        <div class="error-page__content">
+            <div class="error-page__icon"></div>
+            <div class="error-page__title">
+                <h1>موردی پیدا نشد!</h1>
+                <h2>لطفا دوباره تلاش کنید</h2>
+            </div>
+            <div class="error-page__actions">
+                <a href="/">برگشت به خانه</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% footer_mod '{}' %}
+{% endblock %}

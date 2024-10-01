@@ -1,0 +1,23 @@
+.main-nav {
+  background-color: #FFF;
+  position: absolute;
+  // box-shadow: 0 7px 8px 0 rgba(0, 0, 0, .04);
+  left: 0;
+  top: 100%;
+  right: 0;
+  z-index: 99;
+  transition: transform .3s;
+
+  &__row {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  &[class*="-pinned"] {
+    transform: inherit;
+  }
+
+  &[class*="-unpinned"] {
+    transform: translate(0, -110%);
+  }
+}

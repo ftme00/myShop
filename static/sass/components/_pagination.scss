@@ -1,0 +1,40 @@
+.pager {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.pagination {
+  color: #FFF;
+  font-size: 18px;
+  margin: 0 auto;
+
+  li {
+    display: inline-block;
+
+    &.is-active a {
+      background-color: #00bfd6;
+      border: 1px solid #00bfd6;
+      color: #fff;
+    }
+  }
+
+  &__item {
+    border-radius: 8px;
+    color: #535353;
+    font-size: 18px;
+    font-size: 1.286rem;
+    line-height: 34px;
+    margin: 0 3px;
+  }
+
+  &__item, &__next, &__previous {
+    display: block;
+    text-align: center;
+    color: #616161;
+    cursor: pointer;
+    width: 33px;
+    height: 33px;
+    line-height: 35px;
+  }
+}

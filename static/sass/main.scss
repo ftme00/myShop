@@ -1,0 +1,73 @@
+@charset "UTF-8";
+/*!
+Theme Name: myShop
+Author: UI Team
+Description: Powered By SASS
+Version: 1.0.0
+License: ISC
+*/
+
+/*--------------------------------------------------------------
+# Abstracts
+--------------------------------------------------------------*/
+@import "abstracts/mixin";
+@import "abstracts/mq";
+@import "abstracts/variables";
+
+/*--------------------------------------------------------------
+# Vendors
+--------------------------------------------------------------*/
+@import "vendors/normalize";
+@import "vendors/select2";
+@import "vendors/swiper";
+@import "vendors/remodal.scss";
+@import "vendors/remodal-default-theme.scss";
+@import "vendors/animate";
+
+/*--------------------------------------------------------------
+# Base
+--------------------------------------------------------------*/
+@import "base/typography";
+@import "base/base";
+@import "base/icon";
+@import "base/utilies";
+
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+@import "elements/link";
+@import "elements/list";
+@import "elements/heading";
+
+/*--------------------------------------------------------------
+# Layout
+--------------------------------------------------------------*/
+@import "layout/layout";
+@import "layout/header";
+@import "layout/footer";
+
+/*--------------------------------------------------------------
+# Components
+--------------------------------------------------------------*/
+@import "components/buttons";
+@import "components/adplacement";
+@import "components/switcher";
+@import "components/compare-rate";
+@import "components/checkbox";
+@import "components/slider";
+@import "components/notification";
+@import "components/breadcrumb";
+@import "components/pagination";
+@import "layout/navigation";
+@import "components/modal";
+@import "components/comment";
+
+/*--------------------------------------------------------------
+# Pages
+--------------------------------------------------------------*/
+@import "pages/index";
+
+/*--------------------------------------------------------------
+# Customize For myShop
+--------------------------------------------------------------*/
+@import "abstracts/bootstrap";

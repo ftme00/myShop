@@ -1,0 +1,13 @@
+{% extends "modules/custom_tags/index.html" %}
+{% block content %}
+{% set  discount_products = product_filter("discount", 10) %}
+{% set  latest_products = product_filter("latest", 10) %}
+{% header_mod '{}' %}
+
+<div>
+    <h1>my Shop</h1>
+</div>
+
+{% footer_mod '{}' %}
+{% include "base_footer.html" %}
+{% endblock %}

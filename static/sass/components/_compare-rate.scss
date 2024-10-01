@@ -1,0 +1,27 @@
+.row-rating {
+  position: relative;
+  display: inline-flex;
+
+  &:before {
+    content: '\00a0\e809\00a0\e809\00a0\e809\00a0\e809\00a0\e809';
+    color: #cbd4d8;
+    font-family: icdigibab;
+    font-size: 14px;
+  }
+
+  .rate {
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    display: inline-flex;
+  }
+
+  .star {
+    &:before {
+      content: '\00a0\e808';
+      font-size: 14px;
+      color: #FFB517;
+      font-family: icdigibab;
+    }
+  }
+}

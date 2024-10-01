@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="fa-IR">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
+    {% for meta_tag in store.custom_meta_tags %}
+    <meta name="{{meta_tag.name}}" content="{{meta_tag.content}}"/>
+    {% endfor %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    {% if store.meta_keyword %}
+    <meta name="keywords" content="{{store.meta_keyword}}">
+    {% endif %}
+    {% if store.meta_desc %}
+    <meta name="description" content="{% if store.description %}{{store.meta_desc}}{% else %}{{store.name}}{% endif %}">
+    {% endif %}
+    {% if store.enamad_meta_id %}
+    <meta name="enamad" content="{{store.enamad_meta_id}}">
+    {% endif %}
+    {% if store.google_analytics %}
+    <meta name="google-site-verification" content="{{store.google_analytics}}">
+    {% endif %}
+    <meta name="فروشگاه" content="{{store.name}}"/>
+    <title>{% block page_title %}{{g.Store.Title}}{% endblock %}</title>
+    {% if store.has_favicon %}
+    <link rel="icon" href="{{store.favicon}}"/>
+    {% endif %}
+
+    <link rel="stylesheet" type="text/css" href="//{{store.domain}}/static/css/main.css">
+    {% block custom_header %}{% endblock %}
+    <script type="text/javascript" src="//{{store.domain}}/static/vendors/jquery-3.7.0.min.js"></script>
+    <script type="text/javascript" src="//{{store.domain}}/static/js/general.js"></script>
+</head>
+<body class="accounts-page">
+    <main class="main">
+        <div class="account-layout">
+            <!--start-content-tags-mod-e0k4q02205hyaj73elxiymuswwanm362-->
+            {% block content %} {% endblock %}
+            <!--end-content-tags-mod-e0k4q02205hyaj73elxiymuswwanm362-->
+        </div>
+    </main>
+
+    <script src="//{{store.domain}}/static/vendors/headroom.js"></script>
+    <script src="//{{store.domain}}/static/vendors/validation/jquery.validate.min.js"></script>
+    <script src="//{{store.domain}}/static/vendors/validation/additional-methods.min.js"></script>
+    <script src="//{{store.domain}}/static/vendors/countdown.min.js"></script>
+    <script src="//{{store.domain}}/static/vendors/remodal/remodal.min.js"></script>
+    {% block custom_footer %}
+    {% endblock %}
+    <div class="remodal remodal-loader" data-remodal-options="hashTracking: false, closeOnOutsideClick: false"
+        data-remodal-options="" role="dialog" data-remodal-id="loader">
+        <div class="remodal-loader__logo">
+            <img src="{{store.logo}}" alt="{{store.name}}">
+        </div>
+        <div class="remodal-loader__loading">
+            <svg preserveAspectRatio="xMidYMid" viewBox="0 0 100 30"
+                xmlns="http://www.w3.org/2000/svg" height="25px" width="100px" class="lds-message">
+                <g transform="translate(20 15)">
+                    <circle cx="0" cy="0" r="6" fill="#FF5F74" transform="scale(0.297012 0.297012)">
+                        <animateTransform attributeName="transform" type="scale" begin="-0.3375s" calcMode="spline"
+                                        keySplines="0.3 0 0.7 1;0.3 0 0.7 1" values="0;1;0" keyTimes="0;0.5;1" dur="0.9s"
+                                        repeatCount="indefinite"></animateTransform>
+                    </circle>
+                </g>
+                <g transform="translate(40 15)">
+                    <circle cx="0" cy="0" r="6" fill="#FF5F74" transform="scale(0.654739 0.654739)">
+                        <animateTransform attributeName="transform" type="scale" begin="-0.225s" calcMode="spline"
+                                        keySplines="0.3 0 0.7 1;0.3 0 0.7 1" values="0;1;0" keyTimes="0;0.5;1" dur="0.9s"
+                                        repeatCount="indefinite"></animateTransform>
+                    </circle>
+                </g>
+                <g transform="translate(60 15)">
+                    <circle cx="0" cy="0" r="6" fill="#FF5F74" transform="scale(0.935881 0.935881)">
+                        <animateTransform attributeName="transform" type="scale" begin="-0.1125s" calcMode="spline"
+                                        keySplines="0.3 0 0.7 1;0.3 0 0.7 1" values="0;1;0" keyTimes="0;0.5;1" dur="0.9s"
+                                        repeatCount="indefinite"></animateTransform>
+                    </circle>
+                </g>
+                <g transform="translate(80 15)">
+                    <circle cx="0" cy="0" r="6" fill="#FF5F74" transform="scale(0.964916 0.964916)">
+                        <animateTransform attributeName="transform" type="scale" begin="0s" calcMode="spline"
+                                        keySplines="0.3 0 0.7 1;0.3 0 0.7 1" values="0;1;0" keyTimes="0;0.5;1" dur="0.9s"
+                                        repeatCount="indefinite"></animateTransform>
+                    </circle>
+                </g>
+            </svg>
+        </div>
+    </div>
+</body>
+</html>
